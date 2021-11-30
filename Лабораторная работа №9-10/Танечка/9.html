@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>9</title>
+        <meta charset="UTF-8">
+        <link href="9 CSS.css" rel="stylesheet">
+    </head>
+    <body>
+        <textarea id="mytext" >    перетащи меня</textarea><br><br><br>
+        <img src="catsssssss.jpg" id="myimg">
+        <br><br><br>
+
+        <h3 class="h3DvigImg">&#10022;Движение картинки влево 1</h3>
+        <img src="be1.jpg" id="animimg1">
+
+        <h3 id="boimg"class="boimg">&#10022;Движение картинки по кривой</h3>
+        <img src="boo1.jpg" id="animimg2" onclick="fun()" >
+        <br><br>
+
+        <h3 id="graf">&#10022;График</h3>
+        <form name='mygrafic' id='mygrafic' >
+            <fieldset>
+                <select name='funccolor' id="funccolor">
+                    <option value="#FFFFFF">Белый</option>
+                    <option value="#FFC618">Медовый</option>
+                    <option value="#F000DF">Пурпурный</option>
+                    <option value="#008CF0">Аква</option>
+                    <option value="#D95030">Лососево-красный</option>
+                    <option value="#A12312">Томатно-красный</option>
+                </select>
+                <br><br>
+                <input type='radio' name='funcz' value='y=x*x' /> x^2 <br>
+                <input type='radio' name='funcz' value='y=x*x*x' /> x^3 <br>
+                <input type='radio' name='funcz' value='y=Math.sin(x)' /> sin(x) <br>
+                <input type='radio' name='funcz' value='y=Math.cos(x)' /> cos(x) <br>
+    
+                <canvas id='canvas' width=1000 height=400></canvas><br><br /><!--Создает область исп JS можно рисовать разные объекты, выводить изображения,и тд -->
+                <input id="button" type='button' value=' Построить график' onclick='graf()' />
+                <input id="button" type="button" value="Очистить" onclick=' clearcanvas()'>
+            </fieldset>
+        </form>
+
+        <h3 сlass="h3Menu">&#10022;Меню </h3>
+        <div id="nav">
+            
+            <div class="menu-item">
+                Перетаскивание
+                <div class="submenu">
+                   <a href="#mytext">ссылка на задание</a>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                Перемещение
+               <div class="submenu">
+                <a href="#boimg">ссылка на задание</a>
+               </div>
+           </div>
+
+           <div class="menu-item">
+                Графики ф-ций  
+                <div class="submenu">
+                    <a href="#mygrafic">ссылка на задание</a>
+                </div>
+            </div>
+
+        </div>
+            <br><br><br>
+            <h3></h3>
+        <script src="9 JS.js"></script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>9.2</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                background-color: rgb(124, 173, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <form name='one' id='user' >
+            <fieldset>
+    
+                <legend>Выбор цвета</legend>
+    
+                <select name='color' id="color">
+                    <option value="Red">Красный</option>
+                    <option value="Green">Зелёный</option>
+                    <option value="Blue">Синий</option>
+                    <option value="Orange">Оранжевый</option>
+                    <option value="Yellow">Жёлтый</option>
+                    <option value="Black">Чёрный</option>
+                </select>
+                <br><br>
+    
+                <input type='radio' name='s' value='y=x*x' /> x^2 <br>
+                <input type='radio' name='s' value='y=x*x*x' /> x^3 <br>
+                <input type='radio' name='s' value='y=Math.sin(x)' /> sin(x) <br>
+                <input type='radio' name='s' value='y=Math.cos(x)' /> cos(x) <br>
+    
+                <canvas id=canvas width=300 height=300></canvas><br /><br /><!--Создает область исп JS можно рисовать разные объекты, выводить изображения,и тд -->
+                <input type='button' value=' нарисовать график ' onclick='draw()' />
+    
+            </fieldset>
+        </form>
+
+<script>//
+
+    var cw = canvas.width,
+        ch = canvas.height;
+    var ctx = document.getElementById('canvas').getContext('2d');
+    var m = 5;
+    
+    function draw() {
+        for (x = -cw / 2 / m; x < cw / 2 / m; x += 1 / m) {
+            eval(document.forms['one'].elements['s'].value);
+            ctx.fillRect(x * m + cw / 2, ch - (y * m + ch / 2), 1, 1);
+            ctx.fillStyle = document.getElementById('color').value;
+        }
+    }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS-8</title>
+    <link>
+    <style>
+        body{
+            background-color: rgba(180, 241, 119, 0.753);
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-gap: 30px;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 30px;
+            background-color: white;
+        }
+        .div1, .div2{
+            border: 1px solid grey;
+            margin: 10px 20px 10px -10px;
+            padding: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            font-size: 27px;
+        }
+        #zad3{
+            width: 300px;
+            border: 5px ridge pink;
+        }
+        #img_zad4{
+            border: 5px ridge rgb(245, 136, 230);
+        }
+        #zad5{
+            border: 3px solid rgba(163, 83, 238, 0.781)
+        }
+        #copyright{
+            text-align: right;
+            margin-right: 20px;
+        }
+        @keyframes rgb-color {
+            from{
+                border-color: red;
+            }
+            20%{
+                border-color: rgb(255, 136, 0);
+            }
+            40%{
+                border-color: yellow;
+            }
+            60%{
+                border-color: rgb(45, 214, 45);
+            }
+            80%{
+                border-color:  cyan;
+            }
+            90%{
+                border-color: blue;
+            }
+            to{
+                border-color: blueviolet;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1">
+            <h1>Задания Лабораторной работы №8</h1>
+            <p><strong><i>Задание 1:</i></strong> Создать программу на JS, изменяющую цвет слова в тексте при наведении курсора мыши (событие Onmouseover, свойство style.color).</p>
+            <p><strong><i>Задание 2:</i></strong> Создать программу на JS, изменяющую размер шрифта слова щелчком мыши (событие Onclick, свойство style.fontSize).</p>
+            <p><strong><i>Задание 3:</i></strong> Создать программу на JS замены картинки на другую при щелчке мышью с помощью метода getElementById и свойства src.</p>
+            <p><strong><i>Задание 4:</i></strong> Создать программу на JS, заменяющую текст изображением, с использованием метода getElementById и свойства innerHTML.</p>
+            <p><strong><i>Задание 5:</i></strong> Создать эффекты увеличения размера рисунка (свойство width) при наведении на него курсора мыши и возврата к первоначальному размеру при уходе курсора с рисунка (событие onmouseout)</p>
+            <p><strong><i>Задание 6:</i></strong> Нарисовать цветную рамку произвольного стиля вокруг любого абзаца при двойном щелчке (событие dblclick) на абзац.</p>
+        </div>
+        <div class="div2">
+            <h1>Решение</h1>
+            <p><strong><i>1. </i></strong>Привет, странник, <i id="zad1">наведи курсор на меня!</i></p>
+            <p><strong><i>2. </i></strong>Привет, странник, <i id="zad2">нажми на меня!</i></p>
+            <p><strong><i>3. </i></strong>Нажми на <i>котика</i>, чтобы оживить его!</p>
+            <img id="zad3" src="котик).jpg">
+            <div id="zad4"><p><strong><i>4. </i></strong>Нажми сюда, если хочешь увидеть нечно милое:3</p></div>
+            <p><strong><i>5. </i></strong>Наведи курсор на изображение.</p><img id="zad5" src="tony_stark.png" style="width: 300px;">
+            <p id="zad6" style="width: 300px; animation: rgb-color 10s linear infinite alternate;"><strong><i>6. </i></strong>Создать rgb рамочку.</p>
+        </div>
+        <span></span>
+        <span id="copyright">&copy;Вакуленчик Владислав Сергеевич</span>
+    </div>
+    <script>
+        "use strict"
+        zad1.onmouseover = function(){
+            zad1.style.color = 'red';
+        }
+        zad1.onmouseout = function(){
+            zad1.style.color = 'black';
+        }
+
+        let k = 0;
+        zad2.onclick = function(){
+            k++;
+            if (k % 2 == 1)
+            zad2.style.fontSize = '60px';
+            else
+            zad2.style.fontSize = '30px';
+        }
+
+        zad3.onclick = function(){
+            k++;
+            if (k % 2 == 1)
+            zad3.src = 'котик_живой.gif';
+            else
+            zad3.src = 'котик).jpg'
+        }
+
+        zad4.onclick = function(){
+            k++;
+            if (k % 2 == 1)
+            zad4.innerHTML = '<img id="img_zad4" src="sweetyy.gif">';
+            else
+            zad4.innerHTML = '<p><strong><i>4. </i></strong>Нажми, если хочешь увидеть нечно милое:3</p>'
+        }
+        
+        zad5.onmouseover = function(){
+            zad5.src = 'tony_stark_raindbow.jpg';
+            zad5.style.width = '500px';
+        }
+        zad5.onmouseout = function(){
+            zad5.src = 'tony_stark.png';
+            zad5.style.width = '300px';
+        }
+
+        zad6.ondblclick = function(){
+            zad6.style.border = '6px outset';
+        }
+    </script>
+</body>
+</html>
