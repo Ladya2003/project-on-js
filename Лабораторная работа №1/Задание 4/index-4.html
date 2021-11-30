@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<head>
+    <meta charset = "UTF-8">
+    <script>
+        function fun1(){
+            var x=prompt("Введите любое число", "45");
+            if (x == null){
+                alert("Пожалуйста, введите число.");
+            }
+            else {
+            if(((x<20 || x>40) && x!=15) && x%5==0){
+                alert("Правильное значение.");
+            }
+            else {
+                alert("Не правильное значение.");
+            }
+        }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="Правильное число" onclick="fun1()">
+</body>
+</html>

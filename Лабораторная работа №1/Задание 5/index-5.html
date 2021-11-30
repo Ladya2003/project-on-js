@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<head>
+    <meta charset = "UTF-8">
+<script>
+    function fun1(){
+    var x1=prompt("Введите первое число", "15");
+    var num1 = parseInt(x1, 10);
+    var x2=prompt("Введите второе число", "20");
+    var num2 = parseInt(x2, 10);
+    if (isNaN(num1 && num2) == false){ //если пользователь ввел строку(например, fhvkjf), то цикл if вернет true
+     if(num1>num2){
+        alert("Первое число больше второго.");
+    }
+    else if (num1<num2){
+        alert("Первое число меньше второго.");
+    }
+        else {
+            alert("Числа равнозначные.");
+        }
+    }  
+    else { 
+        alert("Пожалуйста, введите числа!");
+    }
+    }
+
+    function fun2(){
+        alert("Статистика баскетбольного противостояния БГТУ и БГУИР");
+        x1=prompt("Сколько 2-очковых забила команда БГТУ?", "10");
+        x1 = parseInt(x1, 10);
+        x2=prompt("Сколько 3-очковых забила команда БГТУ?", "5");
+        x2 = parseInt(x2, 10);
+        y1=prompt("Сколько 2-очковых забила команда БГУИР'a?", "9");
+        y1 = parseInt(y1, 10);
+        y2=prompt("Сколько 3-очковых забила команда БГУИР'a?", "5");
+        y2 = parseInt(y2, 10);
+        if(isNaN(x1&&x2&&y1&&y1) == false){
+        let result1 = x1*2+x2*3;
+        let result2 = y1*2+y2*3;
+        if(result1>result2){
+            alert("Команда БГТУ победила со счетом: " + result1 + ":" + result2 + "!" );
+        }
+        else if(result1<result2){
+            alert("Команда БГУИР'a победила со счетом: " + result2 + ":" + result1 + "!" );
+        }
+        else{
+            alert("Дружеская ничья: " + result2 + ":" + result1 + "!")
+        }
+    }
+    else{
+        alert("Введите числа!");
+    }
+    }
+</script>
+    </head>
+    <body>
+        <input type="button" value="Больше/меньше/равно" onclick="fun1()">
+        <input type="button" value="Баскетбольное противостояние БГТУ и БГУИР." onclick="fun2()">
+    </body>
+</html>

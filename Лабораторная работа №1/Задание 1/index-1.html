@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = 'UTF-8'>
+<script>
+function fun1() {
+ alert('Вас приветствует программа Владислава Вакуленчика.');
+}
+function fun2() {
+ if (confirm('Хотите стать крутым разработчиком?') == true){
+ 
+     alert('Идите учиться в БГТУ!');
+ }
+ else {
+    alert('You are wasting your time!');
+ }
+}
+function fun3() {
+x = prompt('Введите имя', 'Надежда');
+if (x == null){
+alert('Пожалуйста, введите ваше имя.');
+}
+else {
+alert('Добро пожаловать, '+ x + '!');
+}
+}
+</script>
+</head>
+<body>
+<input type='button' value='Окно alert' onclick='fun1()'>
+<input type='button' value='Окно confirm' onclick='fun2()'>
+<input type='button' value='Окно prompt' onclick='fun3()'>
+</body>
+</html>

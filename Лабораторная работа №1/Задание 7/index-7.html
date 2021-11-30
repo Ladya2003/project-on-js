@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+    <script>
+    function fun7()
+    {  
+    try {
+        docuuument.write("Ошибка, вот блин("); //ошибка
+    }
+    catch(err) {
+        alert("Произошла ошибка. " + err);
+    } 
+    alert("Прогорамма продолжила работу, несмотря на ошибку!")
+    } 
+</script>
+</head>
+<body>
+    <input type="button" value="Пример, демонстрирующий обработку исключений с использованием конструкции try … catch." onclick="fun7()">
+</body>
