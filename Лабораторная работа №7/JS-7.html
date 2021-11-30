@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Лаба №sqrt(49)</title>
+        <script>
+            function print(){
+                let checkboxes = document.getElementsByClassName('checkbox');
+                let checkboxesChecked = []; // массив для хранения выбранных чекбоксов
+
+                for (let index = 0; index < checkboxes.length; index++) { //перебираем все выбранные чекбоксы
+                    if (checkboxes[index].checked) {
+                        checkboxesChecked.push(checkboxes[index].value); // положим в массив выбранные чекбоксы
+                    }
+                }
+                document.write("<h2>Факультет Информационных Технологий</h2><p>Студент " + 
+                document.data.first_name.value + " " + document.data.second_name.value + 
+                ", со специальности " + document.data.speciality.value + "-" + 
+                document.data.course.value + ", занимет активную роль в общественной жизни: " + 
+                checkboxesChecked.join(", ") + ".</p>");
+        }
+        </script>
+        <style>
+            body{
+                font-size: 25px;
+                background-color:rgba(188, 253, 248, 0.74);
+            }   
+            h2, p{
+                text-align: center;
+            }
+            fieldset{
+                margin: auto;
+                width: 40%;
+                background-image: linear-gradient(to right, rgba(82, 93, 247, 0.63), rgba(20, 20, 233, 0.705));
+                border: 5px ridge;
+                animation: border-rgb 10s linear infinite;
+            }
+            legend{
+                background-color: rgb(54, 120, 243);
+                border-radius: 10px;
+                padding: 10px;
+            }
+            div{
+                margin: 20px;
+
+            }
+            label{
+                display: inline-block;
+                width: 300px;
+            }
+            input{
+                background-color: rgb(192, 132, 248);
+                box-shadow: inset 0px 0px 5px white;
+                padding: 10px;
+                border-radius: 10px;
+            }
+            input:focus{
+                background-color: black;
+                color: white;
+            }
+            @keyframes border-rgb{
+                from{
+                    border-color: red;
+                }
+                20%{
+                    border-color: orange;
+                }
+                40%{
+                    border-color: yellow;
+                }
+                60%{
+                    border-color: green;
+                }
+                80%{
+                    border-color: blue;
+                }
+                to{
+                    border-color: rgb(255, 0, 200);
+                }
+            }
+        </style>
+        <body>
+            <h2>Лабораторная работа №7: Задание 1</h2>
+            <p><strong><i>Задача: </i></strong>Для кнопки «Напечатать» написать функцию, выводящую на страницу введенную информацию.</p>
+            <form name="data">
+                <fieldset>
+                    <legend>Анкета студента БГТУ</legend>
+                    <div>
+                        <label for="first_name">Ваше Имя:</label>
+                        <input name="first_name" type="text" value="Big">
+                    </div>
+                    <div>
+                        <label for="second_name">Ваша Фамилия:</label>
+                        <input name="second_name" type="text" value="Dawg">
+                    </div>
+                    <div>
+                        <label for="speciality">Ваша специальность:</label>
+                        <select name="speciality">
+                            <option>ИСиТ</option>
+                            <option>ПОИТ</option>
+                            <option>ПОИМБС</option>
+                            <option>ДЭВИ</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="course">Ваш курс:</label>
+                        <input name="course" type="radio" value="1">1
+                        <input name="course" type="radio" value="2">2
+                        <input name="course" type="radio" value="3">3
+                        <input name="course" type="radio" value="4">4
+                    </div>
+                    <div>
+                        <label for="activities">Ваша общественная активность:</label><br>
+                        <input class="checkbox" name="activities" type="checkbox" value="cостою в спортивной команде">Состою в спортивной команде<br>
+                        <input class="checkbox"  name="activities" type="checkbox" value="участвую в общественных мероприятиях">Участвую в общественных мероприятиях<br>
+                        <input class="checkbox"  name="activities" type="checkbox" value="хожу в спортзал">Хожу в спортзал<br>
+                        <input class="checkbox"  name="activities" type="checkbox" value="участвую в квизах">Участвую в квизах<br>
+                        <input class="checkbox"  name="activities" type="checkbox" value="живу в копейке">Живу в копейке<br>
+                    </div>
+                    <div>
+                        <label for="wishes">Ваши пожелания нашей форме</label>
+                        <textarea name="wishes">Хочу пиццу</textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Отправить">
+                        <input type="button" value="Напечатать" onclick="print()">
+                    </div>
+                </fieldset>
+            </form>
+        </body>
+    </head>
+</html>

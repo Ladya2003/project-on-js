@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function print(){
+            let checkboxes=document.getElementsByClassName('box');
+            let CheckBoxArray = [];
+            for(let index=0; index<checkboxes.length; index++){
+                if (checkboxes[index].checked){
+                    /*CheckBoxArray.push(checkboxes[index].value);*/
+                    document.getElementById("container").innerHTML += "<li>" + checkboxes[index].value + "</li>";
+                }
+            } 
+        }
+        </script>
+        <style>
+            body{
+                background-color: rgb(243, 228, 209);
+            }
+            p{
+                font-size: 23px;
+            }
+            input{
+                font-size: 18px;
+                padding: 10px;
+                border-radius: 10px;
+                border: 3px dashed yellowgreen;
+                transition: 0.5s;
+            }
+            input:hover{
+                transform: scale(0.8);
+            }
+            li{
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Лабораторная работа №7: Задание 2</h2>
+        <p><strong><i>Задача: </i></strong>Создать еще одну форму с одним элементом – списком.<br> Заполнить список предметами, выбранными на первой форме.</p>
+        <form>
+            <h2>Выберете изучаемые предметы</h2>
+            <input class="box" type="checkbox" value="Math">Math
+            <input class="box" type="checkbox" value="PE">PE
+            <input class="box" type="checkbox" value="Physics">Physics
+            <input class="box" type="checkbox" value="Chemistry">Chemistry
+            <input class="box" type="checkbox" value="Biology">Biology
+            <input class="box" type="checkbox" value="IT programing">IT programing
+            <input class="box" type="checkbox" value="History">History
+            <input class="box" type="checkbox" value="Phsycology">Phsycology
+            <br><br>
+            <input type="button" value="Print Subjects" onclick="print()">
+            <h2>Ваши изучаемые предметы</h2>
+            <div>
+                <ul id="container">
+
+                </ul>
+            </div>
+        </form>
+    </body>
+</html>
