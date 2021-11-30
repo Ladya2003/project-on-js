@@ -1,0 +1,48 @@
+@font-face{
+    font-family: Exo2;
+    src: url(fonts/Exo2.woff);
+}
+body{
+    background: url(bg-2.jpg);
+    background-size: 175%;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+}
+.big_div{
+    background-color: rgba(255, 200, 127, 0.692);
+    width: 50%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 5px dashed rgba(250, 162, 127, 0.815);
+}
+p{
+    font-size:20px;
+}
+img{
+    border-radius: 10px;
+    border: 4px dashed rgba(255, 229, 115, 0.87); 
+    margin: 20px;
+    display: flex;
+}
+input{
+    background-color: rgb(252, 222, 166);
+    border-color: rgba(253, 194, 83, 0.938);
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: 'Old Standard TT Italic';
+    margin: 10px;
+    padding: 10px;
+    
+}
+input:hover{
+    background-color: rgba(255, 189, 66, 0.87);
+}
+h1{
+    font-family: Exo2;
+}
+h2{
+    font-family: Exo2;
+}
+
