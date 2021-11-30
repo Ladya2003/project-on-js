@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World!</title>
+    <style>
+        body{
+            background-color: rgba(240, 230, 140, 0.63);
+        }
+    </style>
+    <script>
+        function win_close(){
+                window.close("JS-1-open.html");
+            }
+            function text_appear(){
+                document.getElementById("text").innerHTML += "Hello, neighbour!";
+            }
+    </script>
+</head>
+<body>
+    <h2>Hello World!</h2>
+    <input type="button" value="Закрыть окно" onclick="win_close()">
+    <input type="button" value="Вывести текст" onclick="text_appear()">
+    <p id="text"></p>
+</body>
+</html>

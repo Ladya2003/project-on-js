@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main Page</title>
+        <style>
+            body{
+                background-color: rgba(230, 197, 253, 0.644);
+                font-size: 30px;
+            }
+            input{
+                font-size: 20px;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 20px/40px;
+                background-color: rgba(132, 46, 194, 0.719);
+                color: white;
+                transition: 0.5s;
+            }
+            input:hover{
+                transform: scale(1.2);
+            }
+        </style>
+        <script>
+            function win_open(){
+                window.open("JS-6-2-open.html");
+            }
+            function win_close(){
+                window.close("JS-6-2-open.html");
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Лабораторная работа №6</h2>
+        <p> <strong><i>Задание 1:</i></strong> Создать кнопки, открывающие и закрывающие окна с <br>
+            произвольными именами. Создать кнопки, выводящие в каждое из окон <br>
+            какой-нибудь текст, включающий имя окна. Проверить работу скрипта в<br>
+            разных браузерах.</p>
+        <input type="button" value="Открыть окно" onclick="win_open('JS-6-2-open.html')">
+        <p> <strong><i>Задание 2:</i></strong> Поработать над объектами Navigator, Screen, <br>
+            History и location, а также над их методами и свойствами.</p>
+        <input type="button" value="Показать" onclick="window.open('JS-6-3.html')">
+    </body>
+</html>
