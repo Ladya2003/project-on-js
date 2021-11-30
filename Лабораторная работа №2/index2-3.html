@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <script>
+            let a=prompt("a=");
+            a=parseInt(a);
+            let b=prompt("b=");
+            b=parseInt(b);
+
+            document.write("<table border=\"2\">");
+                    document.write("<tr>");
+                    document.write("<th>"+"Радиус"+"</th>");
+                    document.write("<th>"+"Площадь круга"+"</th>");
+                    document.write("<th>"+"Длина окружности"+"</th>");
+                    document.write("</tr>");
+
+                
+                do {
+                    document.write("<tr>");
+                    document.write("<td>"+a.toFixed(1)+"</td>");
+                    document.write("<td>"+Math.round(Math.PI*Math.pow(a,2))+"</td>");
+                    document.write("<td>"+Math.round(2*Math.PI*a)+"</td>");
+                    document.write("</tr>");
+                    a=a+0.3;
+                }
+                while(a<b);
+                    document.write("<tr>");
+                    document.write("<td>"+b+"</td>");
+                    document.write("<td>"+Math.round(Math.PI*Math.pow(b,2))+"</td>");
+                    document.write("<td>"+Math.round(2*Math.PI*b)+"</td>");
+                    document.write("</tr>"); 
+            document.write("</table>");
+        
+    </script>
+</head>
+<body> 
+</body>
+</html>

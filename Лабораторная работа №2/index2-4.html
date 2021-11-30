@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        let n1 = new Number("310");
+        let n2 = new Number("203.1345");  
+        document.write("<table border=\"2\" cellspacing=\"0\" cellpadding=\"5\">");
+            document.write("<tr>");
+            document.write("<th>"+"Число"+"</th>");
+            document.write("<th>"+"Метод"+"</th>");
+            document.write("<th>"+"Результат"+"</th>");
+            document.write("<th>"+"Описание метода"+"</th>");
+            document.write("</tr>");
+
+            document.write("<tr>");
+            document.write("<td>"+n1+"</td>");
+            document.write("<td rowspan=\"2\">"+"to.Exponential(2)"+"</td>");
+            document.write("<td>"+n1.toExponential(2)+"</td>");
+            document.write("<td rowspan=\"2\">"+"Представляет число в экспоненциальной форме и указывает две цифры после точки."+"</td>");
+            document.write("</tr>"); 
+
+            document.write("<tr>");
+            document.write("<td>"+n2+"</td>");
+            document.write("<td>"+n2.toExponential(2)+"</td>");
+            document.write("</tr>");
+            
+            document.write("<tr>");
+            document.write("<td>"+n1+"</td>");
+            document.write("<td rowspan=\"2\">"+"to.Fixed(3)"+"</td>");
+            document.write("<td>"+n1.toFixed(3)+"</td>");
+            document.write("<td rowspan=\"2\">"+"Представляет число в форме с тремя цифрами после точки."+"</td>");
+            document.write("</tr>"); 
+
+            document.write("<tr>");
+            document.write("<td>"+n2+"</td>");
+            document.write("<td>"+n2.toFixed(3)+"</td>");
+            document.write("</tr>"); 
+
+            document.write("<tr>");
+            document.write("<td>"+n1+"</td>");
+            document.write("<td rowspan=\"2\">"+"to.Precision(1)"+"</td>");
+            document.write("<td>"+n1.toPrecision(1)+"</td>");
+            document.write("<td rowspan=\"2\">"+"Представляет число с одной значащей цифрой."+"</td>");
+            document.write("</tr>"); 
+
+            document.write("<tr>");
+            document.write("<td>"+n2+"</td>");
+            document.write("<td>"+n2.toPrecision(1)+"</td>");
+            document.write("</tr>"); 
+            
+            document.write("<tr>");
+            document.write("<td>"+n1+"</td>");
+            document.write("<td rowspan=\"2\">"+"to.String(16)"+"</td>");
+            document.write("<td>"+n1.toString(16)+"</td>");
+            document.write("<td rowspan=\"2\">"+"Строковое представление числа в 16-ричной системе счисления."+"</td>");
+            document.write("</tr>"); 
+
+            document.write("<tr>");
+            document.write("<td>"+n2+"</td>");
+            document.write("<td>"+n2.toString(16)+"</td>");
+            document.write("</tr>");
+        document.write("</table>");
+
+        
+    </script>
+</head>
+<body> 
+</body>
+</html>

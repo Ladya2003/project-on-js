@@ -1,0 +1,33 @@
+body{
+    background: url(bg-3.jpg);
+    background-size: 150%;
+}
+#full_div{
+    background-color: rgba(252, 187, 102, 0.582);
+    border: 5px dashed rgba(250, 227, 185, 0.712);
+    width: 50%;
+    padding: 20px;  
+    margin: 20px;
+    border-radius: 4%;
+}
+input{
+    font-family: 'Old Standard TT Italic';
+    font-size: 20px;
+    border-radius: 15px;
+    border-color: rgb(255, 196, 69);
+    margin: 10px;
+    padding: 10px;
+    background-color:rgba(250, 223, 136, 0.849);
+}
+input:hover{
+    background-color: rgba(248, 213, 96, 0.849);
+}
+p{
+    font-size: 20px;
+}
+h1, h2{
+    font-family: Constantia;
+}
+/*table, td, tr{
+    background:rgba(248, 214, 140, 0.63);
+}*/
