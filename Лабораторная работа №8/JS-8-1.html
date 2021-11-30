@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+<script>
+    "use strict"
+    let text = new Array('Привет, ', '<span id="text-color" style="color: red;" onmouseover="color_change()" onmouseout="color_back()">странник</span>', ', как у тебя дела?');
+    let xstr = "";
+    for (let i=0; i<text.length; i++)
+    xstr += text[i];
+    document.write(xstr);
+    function color_change(){
+        let xid = event.srcElement.id;
+        document.all[xid].style.color = 'green';        
+    }
+    function color_back(){
+        let xid = event.srcElement.id;
+        document.all[xid].style.color = 'red';
+    }
+</script>
+</head>

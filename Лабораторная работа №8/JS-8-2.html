@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+<script>
+    "use strict"
+    let text = new Array('Привет, ', '<span id="text-font" style="fontSize: 30px;" onclick="font_change()">странник</span>', ', как у тебя дела?');
+    let xstr = "";
+    for (let i=0; i<text.length; i++)
+    xstr += text[i];
+    document.write(xstr);
+    let k = 0;
+    function font_change(){
+        k++;
+        let xid = event.srcElement.id;
+        if (k % 2 == 1)
+        document.all[xid].style.fontSize = '100px';  
+        else
+        document.all[xid].style.fontSize = '25px';
+        xid = !xid;      
+    }
+</script>
+</head>

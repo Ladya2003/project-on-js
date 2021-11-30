@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+<script>
+    "use strict"
+    let pic_sm = new Array("1.png", "2.jpg");
+    let pic_bg = new Array("3.jpg", "4.jpg");
+    let pic_flag = new Array(pic_sm.length); // массив флагов  -- ?
+    /* Формирование строки тегов изображений */
+    let xstr = "";
+    for (let i=0; i<pic_sm.length; i++)
+    xstr += '<img id="img'+i+'" src="'+pic_sm[i]+'"onclick="imgchange()">'; //<img id="img1" src="pic_sm[1]" onclicl="imgchange()">
+    document.write(xstr);
+    function imgchange() {
+    let xid=event.srcElement.id; //id изображения, на котором был щелчок     .srcElement - выводит ссылку на объект, ктр инициировал событие
+    let n=parseInt(xid.substr(3)); // выделяем номер элемента(например, image=img3; image.substr(3) == 3;    .substr(start, length) - выводит начиная с указ позиции указан кол-во символов
+    if (pic_flag[n]) document.all[xid].src=pic_sm[n];
+    else document.all[xid].src=pic_bg[n];
+    pic_flag[n] = !pic_flag[n]; //уменьшаем изображение при еще одном щелчке
+    }
+</script>
+</head>
