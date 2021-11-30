@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Лабораторная работа №4 СЯП</title>
+        <style>
+            body{
+                background-color: bisque;
+                font-size: 20px;
+            }
+            .add{
+                margin: 0px;
+                color: rgb(103, 243, 103);
+            }
+            .sub{
+                margin: 0px;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Задание №1 </h2>
+        <p><strong>Условие:</strong> Создать пользовательский объект <strong>Gruppa</strong> (использовать пример, представленный выше). <br>
+            Добавить метод <strong>sub_stud</strong> (исключить из группы k студентов). <br>
+            Создать несколько экземпляров объекта Gruppa (gr2,gr3, gr4).<br> 
+            Применить методы <strong>add_stud</strong> и <strong>sub_stud</strong> к каждому экземпляру.  <br>
+            Вывести на страницу количество студентов в каждой группе.
+        </p>
+        <script type="text/javascript">
+            function Gruppa(n,spec,kolich) {
+//Свойства(номер, специальность, количество)
+            this.n=n;
+            this.spec=spec;
+            this.kolich=kolich;
+//Метод (добавить в группу k студентов)
+            this.add_stud=function add_stud(k) {
+            this.kolich+=k;
+            document.write("<p class = 'add'>" + 'В группу ' + this.n + ' добавили '+ k + ' студентов(а).</p>');
+            }
+            this.sub_stud=function sub_stud(k){
+                this.kolich-=k;
+                document.write("<p class = 'sub'>" + 'Из группы ' + this.n + ' отчислили '+ k + ' студентов(а).</p>');
+            }
+            }
+            document.write("<h3>Работа с пользовательскими объектами и их методами</h3>")
+        gr1=new Gruppa(2, 'ИСиТ', 28);
+        document.write("Номер группы " + gr1.n + ", специальность группы " + gr1.spec + ", количество студентов " + gr1.kolich + "<br>");
+        gr1.add_stud(2);
+        gr1.sub_stud(3);
+        //C помощью prototype добавим объекту свойство kurs,
+        //экземпляры объекта будут иметь это свойство
+        Gruppa.prototype.kurs=this.kurs;
+        gr1.kurs=2;
+        document.write("Номер группы " + gr1.n + ", специальность группы " + gr1.spec + ", количество студентов " + gr1.kolich + ", курс группы " + gr1.kurs+"<br><br>");
+
+        gr2 = new Gruppa(3, 'Поит', 24);
+        document.write("Номер группы " + gr2.n + ", специальность группы " + gr2.spec + ", количество студентов " + gr2.kolich + "<br>");
+        gr2.add_stud(9);
+        gr2.sub_stud(2);
+        document.write("Номер группы " + gr2.n + ", специальность группы " + gr2.spec + ", количество студентов " + gr2.kolich + "<br><br>");
+
+        gr3 = new Gruppa(7, 'Поит', 40);
+        document.write("Номер группы " + gr3.n + ", специальность группы " + gr3.spec + ", количество студентов " + gr3.kolich + "<br>");
+        gr3.add_stud(4);
+        gr3.sub_stud(10);
+        document.write("Номер группы " + gr3.n + ", специальность группы " + gr3.spec + ", количество студентов " + gr3.kolich + "<br><br>");
+
+        gr4 = new Gruppa(3, 'Дэви', 15);
+        document.write("Номер группы " + gr4.n + ", специальность группы " + gr4.spec + ", количество студентов " + gr4.kolich + "<br>");
+        gr4.add_stud(9);
+        gr4.sub_stud(1);
+        document.write("Номер группы " + gr4.n + ", специальность группы " + gr4.spec + ", количество студентов " + gr4.kolich + "<br><br><hr>");
+
+        //задание 3
+        document.write("<h3>Заданик №3</h3>");
+        document.write("<h3>Оператор in</h3>");
+        document.write("<strong>Условие:</strong> Проверить наличие любого свойства у созданных ранее пользовательских объектов <strong>Gruppa</strong><br>")
+        document.write("Есть ли св-во 'spec' в экземпляре gr1 объекта Gruppa? - ");
+        document.write('spec' in gr1, "<br><br>");
+
+        document.write("<h3>Оператор instanceof</h3>");
+        document.write("<strong>Условие: </strong>Проверить, являются ли созданные объекты объектами Array, String, Object.<br>");
+        document.write("Является ли объект Gruppa объектом Array? - ", Gruppa instanceof Array, "<br>");
+        document.write("Является ли объект Gruppa объектом String? - ", Gruppa instanceof String, "<br>");
+        document.write("Является ли объект Gruppa объектом Object? - ", Gruppa instanceof Object, "<br> <br>");
+        document.write("<h3>Оператор typeof</h3>");
+        document.write("<strong>Условие: </strong>Узнать тип всех свойств пользовательского объекта Gruppa<br>")
+        document.write("Тип объекта 'Gruppa' - ", typeof Gruppa, "<br>");
+        document.write("Тип св-ва 'n' - ", typeof gr1.n, "<br>");
+        document.write("Тип св-ва 'spec' - ", typeof gr1.spec, "<br>");
+        document.write("Тип св-ва 'kolich' - ", typeof gr1.kolich, "<br>");
+        document.write("Тип св-ва 'kurs' - ", typeof gr1.kurs, "<br>");
+        </script>
+    </body>
+</html>

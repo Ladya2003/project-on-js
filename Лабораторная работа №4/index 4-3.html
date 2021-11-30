@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторная работа №4 СЯП</title>
+    <style>
+        body{
+            background-color: rgba(118, 243, 129, 0.418);
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Задание №3</h2>
+    <p>
+        <strong>Условие: </strong>Использовать объекты Math, Array и String из лабораторной
+        работы № 3.<br>
+        <strong>Delete.</strong> Удалить из массива элемент с номером 3, вывести исходный
+        массив и полученный.<br>
+    <strong>In.</strong> Проверить, имеется ли у массива 2-й элемент.
+    </p>
+    <script>
+        let arr = new Array("pow", "pop", "push", "shift", "round", "floor", "slice", "sort");
+        document.write("Исходный массив: " + arr.join(', ')+"<br>");
+        delete arr[3];
+        document.write("Удалим 3 элемент массива <br>" + arr.join(', ')+"<br>");
+        document.write("Есть ли у массива 2 элемент? - ");
+        document.write(2 in arr, "<br><hr>");
+        function ret5(){
+            return 5;
+        }
+        document.write("Тип ф-ии 'ret5' - ", typeof ret5, "<br>");
+        document.write("Тип массива 'arr' - ", typeof arr);
+    </script>
+</body>
+</html>

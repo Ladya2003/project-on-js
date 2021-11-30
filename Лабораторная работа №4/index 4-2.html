@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Лабораторная работа №4 СЯП</title>
+        <style>
+            body{
+                background-color: rgba(196, 255, 230, 0.562);
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Задание №2</h2>
+        <p>
+            Создать пользовательский объект <strong>Студент</strong>. Свойства: <strong>имя, <br>
+            фамилия, физика (оценка), математика, информатика</strong>. Методы: <strong>вывести свое <br>
+            имя и фамилию</strong> в окно, рассчитать <strong>средний балл</strong> и вывести на страницу. <br>
+            Создать 3 экземпляра объекта <strong>Студент.</strong> Вывести информацию о всех студентах. <br>
+            Добавить какое-нибудь свойство объекту <strong>Студент.</strong> Задать значение этого свойства для всех экземпляров. <br>
+            Вывести информацию о всех студентах на страницу.
+        </p>
+        <script>
+            function Student(name, surname, physics, math, it){
+                this.name = name;
+                this.surname = surname;
+                this.physics = physics;
+                this.math = math;
+                this.it = it;
+                this.full_name = function full_name(){
+                    document.write(this.name + " " + this.surname + "<br>");
+                }
+                this.aver_sc = function aver_sc(){
+                    document.write("Средний балл: " + ((this.physics + this.math + this.it) / 3).toFixed(1) + "<br>");
+                }
+            }
+            document.write("<h3>Работа с пользовательским объектом Student и его методами</h3>");
+             st1 = new Student("Слава", "Бэброу", 9, 10, 10);
+                st1.full_name();
+                st1.aver_sc();
+                Student.prototype.kurs = this.kurs;
+                st1.kurs = 1;  
+                document.write("Курс студента: " + st1.kurs + "<br><br><hr>");
+                st2 = new Student("Тамара", "Дзержинская", 6, 7, 5);
+                st2.full_name();
+                st2.aver_sc();
+                st2.kurs = 3;
+                document.write("Курс студента: " + st2.kurs + "<br><br><hr>");
+                st3 = new Student("Алишер", "Карлионе", 3, 7, 9);
+                st3.full_name();
+                st3.aver_sc();
+                st3.kurs = 5;
+                document.write("Курс студента: " + st3.kurs + "<br><br><hr>");
+                document.write("<h3>Задание №3</h3>");
+                document.write("<h3>Оператор in</h3>");
+                document.write("<strong>Условие: </strong>Проверить наличие любого свойства у созданных ранее пользовательских объектов Студент.<br>");
+                document.write("Есть ли св-во 'name' в объекте Student? - ");
+                document.write("name" in Student, "<br>");
+                document.write("<h3>Оператор typeof</h3>");
+                document.write("<strong>Условие: </strong>Узнать тип всех свойств пользовательского объекта Студент.<br>");
+                document.write("Тип св-ва 'name' - ", typeof st1.name, "<br>");
+                document.write("Тип св-ва 'surname' - ", typeof st1.surname, "<br>");
+                document.write("Тип св-ва 'kurs' - ", typeof st1.kurs, "<br>");
+                document.write("Тип св-ва 'physics' - ", typeof st1.physics, "<br>");
+                document.write("Тип св-ва 'math' - ", typeof st1.math, "<br>");
+                document.write("Тип св-ва 'it' - ", typeof st1.it, "<br>");
+        </script>
+    </body>
+</html>
